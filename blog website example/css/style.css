@@ -24,6 +24,24 @@ ul {
   list-style: none;
 }
 
+h1 {
+  font-family: "Quicksand", "Arial Narrow Bold", sans-serif;
+  font-size: 2.5rem;
+}
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+}
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -40,6 +58,7 @@ ul {
   overflow: hidden;
   font-family: "Cairo", sans-serif;
   font-family: "Quicksand", sans-serif;
+  transition: height 0.6s ease;
 }
 
 /*it sucks not using sass just for nesting :( */
@@ -47,14 +66,25 @@ ul {
 .nav .nav-menu {
   justify-content: space-between;
 }
-
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
 .nav .nav-items {
   display: flex;
   margin: 0;
 }
 
 .nav .nav-items .nav-link {
-  padding: 1.6rem 1rem;
+  padding: 1.4rem 1rem;
   font-size: 1.1rem;
   position: relative;
   font-family: "Quicksand";
@@ -80,4 +110,106 @@ ul {
 .nav .social i:hover {
   color: #a1c4cf;
 }
+.collapse {
+  height: 30rem;
+}
+@media only screen and (max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}
 /*navbar*/
+
+/* main */
+
+/*hero section*/
+
+.site-title {
+  background: url("../assets/Background-image.png");
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+}
+
+.site-title .site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.site-title h1,
+h3 {
+  margin: 0.3rem;
+}
+
+.site-title .btn {
+  margin: 1.8rem;
+  background: var(--sky);
+  outline: none;
+}
+.site-title .btn:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: var(--white);
+}
+/* end hero section*/
+
+/*blog*/
+.blog {
+  background: url("../assets/Abract01.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 70%;
+}
+.blog .container {
+  margin: 0 5vw;
+}
+.blog .blog-post {
+  padding-top: 6rem;
+}
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 3rem 2rem;
+  box-shadow: 0 15px 20px rgb(0, 0, 0, 0.2);
+}
+.blog-title {
+  padding: 2rem 0;
+}
+.btn-blog {
+  padding: 0.7rem 2rem;
+  margin: 0.5rem;
+  background: var(--sky);
+}
+.blog-content span {
+  display: block;
+  font-family: monospace;
+}
+.container .owl-nav {
+  margin: 0 auto;
+  width: 100%;
+}
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next {
+  color: var(--text-gray);
+  background: transparent;
+  font-size: 2rem;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: transparent;
+  color: var(--text-gray);
+}
+.owl-theme .owl-nav [class*="owl-"] {
+  outline: none;
+}
+/*end blog*/
+/* end main */
