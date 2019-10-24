@@ -33,4 +33,6 @@ $(document).ready(
             }, 1000);
         })
 
+
+        AOS.init();
     });
