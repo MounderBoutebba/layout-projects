@@ -90,7 +90,7 @@ p {
 }
 
 .nav .nav-items .nav-link {
-  padding: 1.4rem 1rem;
+  padding: 1.6rem 1rem;
   font-size: 1.1rem;
   position: relative;
   font-family: "Quicksand";
@@ -119,15 +119,7 @@ p {
 .collapse {
   height: 30rem;
 }
-@media only screen and (max-width: 750px) {
-  .nav .nav-menu,
-  .nav .nav-items {
-    flex-direction: column;
-  }
-  .nav .toggle-collapse {
-    display: initial;
-  }
-}
+
 /*navbar*/
 
 /* main */
@@ -384,4 +376,61 @@ h3 {
 .footer .follow-us div i {
   color: white;
   padding: 0 0.4rem;
+}
+.footer .move-up {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+}
+.footer .move-up span {
+  color: var(--midnight);
+}
+.footer .move-up span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1130px) {
+  .site-content .post-content > .post-image .post-info {
+    left: 2rem !important;
+    bottom: 1.2rem !important;
+    border-radius: 0% !important;
+  }
+
+  .site-content .sidebar .popular-post .post-info {
+    display: none !important;
+  }
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+  .nav .toggle-collapse {
+    display: initial;
+  }
+  .site-content {
+    grid-template-columns: 100%;
+  }
+  .footer .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .blog {
+    height: 125vh;
+  }
+  .site-content .post-content > .post-image .post-info {
+    display: none;
+  }
+  .footer .container > div {
+    padding: 1rem 0.9rem !important;
+  }
+  .toggle-collapse {
+    width: 80%;
+  }
 }
