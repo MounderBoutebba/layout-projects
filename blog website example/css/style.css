@@ -311,7 +311,7 @@ h3 {
 .newsletter {
   padding-top: 3rem;
 }
-.newsletter .form-element {
+.sidebar .newsletter .form-element {
   padding: 0.5rem 2rem;
 }
 
@@ -334,9 +334,54 @@ h3 {
 .popular-tags .tags .tag {
   background: var(--sky);
   padding: 0.4rem 1rem;
-  border-radius: 2rem;
+  border-radius: 3rem;
   margin: 0.4rem 0.6rem;
 }
 /*end side bar*/
 
 /* end main */
+
+.footer {
+  height: 100%;
+  background: #000;
+  position: relative;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer .container > div {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 3rem 0.9rem;
+}
+.footer .container h2 {
+  color: var(--white);
+}
+.footer .newsletter .form-element {
+  display: inline-block;
+  background: #000;
+}
+.footer .newsletter .form-element input {
+  padding: 0.5rem 0.7rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  width: 74%;
+}
+.footer .newsletter .form-element span {
+  background: var(--sky);
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+.footer .instagram div > img {
+  display: inline-block;
+  width: 25%;
+  height: 50%;
+  margin: 0.3rem 0.4rem;
+}
+.footer .follow-us div i {
+  color: white;
+  padding: 0 0.4rem;
+}
