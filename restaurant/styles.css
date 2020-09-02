@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
+
 /*Global styles*/
 *,
 *::before,
@@ -27,6 +28,7 @@ html {
 section {
   padding: 3.9rem 0;
 }
+
 img {
   width: 100%;
   max-width: 100%;
@@ -56,12 +58,14 @@ header {
   z-index: 1;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
+
 .nav {
   height: 7.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .menu-toggle {
   color: #fff;
   font-size: 2.2rem;
@@ -72,9 +76,11 @@ header {
   cursor: pointer;
   z-index: 1500;
 }
+
 .fa-times {
   display: none;
 }
+
 .nav-list {
   list-style: none;
   position: fixed;
@@ -91,12 +97,13 @@ header {
   transform: translateX(-100%);
   transition: transform 0.5s;
 }
+
 .nav::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
@@ -108,19 +115,24 @@ header {
 .open .fa-times {
   display: block;
 }
+
 .open .fa-bars {
   display: none;
 }
+
 .open .nav-list {
   transform: translateX(0);
 }
+
 .open .nav::before {
   opacity: 1;
   transform: scale(1);
 }
+
 .nav-item {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
+
 .nav-link {
   display: block;
   color: #fff;
@@ -130,6 +142,7 @@ header {
   transition: color 0.5s;
   margin-right: -2px;
 }
+
 .nav-link:hover {
   color: var(--secondary-font-color);
 }
@@ -145,6 +158,7 @@ header {
   justify-content: center;
   text-align: center;
 }
+
 .sub-headline {
   font-size: 8.5rem;
   font-family: var(--secondary-font);
@@ -153,10 +167,12 @@ header {
   line-height: 0.4;
   letter-spacing: 2px;
 }
+
 .first-letter {
   text-transform: uppercase;
   font-size: 11.3rem;
 }
+
 .headline {
   color: #fff;
   font-size: 3.7rem;
@@ -166,11 +182,13 @@ header {
   letter-spacing: 0.5rem;
   margin-right: -0.5rem;
 }
+
 .separator {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .line {
   width: 100%;
   max-width: 8.4rem;
@@ -178,6 +196,7 @@ header {
   background-color: #fff;
   position: relative;
 }
+
 .line-right::before,
 .line-left::before {
   content: "";
@@ -191,15 +210,18 @@ header {
   border-right-color: #fff;
   right: 0;
 }
+
 .line-left::before {
   border-left-color: #fff;
   left: 0;
 }
+
 .asterisk {
   font-size: 1.2rem;
   color: var(--secondary-font-color);
   margin: 0 1.6rem;
 }
+
 .headline-description h5 {
   color: #fff;
   font-size: 1.4rem;
@@ -209,12 +231,14 @@ header {
   letter-spacing: 3px;
   margin-right: -3px;
 }
+
 .btn {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-right: -2px;
 }
+
 .cta-btn {
   font-size: 1.1rem;
   background-color: #fff;
@@ -223,6 +247,7 @@ header {
   border-radius: 0.4rem;
   transition: background-color 0.5s;
 }
+
 .cta-btn:hover,
 .cta-btn:focus {
   color: #fff;
@@ -230,3 +255,73 @@ header {
 }
 
 /* discover story */
+
+.global-headline {
+  text-align: center;
+  margin-top: 3.9rem;
+
+}
+
+.discover-our-story .global-headline {
+  margin-top: 6.9rem;
+}
+
+.global-headline .asterisk {
+  color: var(--body-font-color);
+  margin: 2.4rem 0;
+}
+
+.headline-dark {
+  color: var(--main-font-color-dark);
+  letter-spacing: .7rem;
+  margin-right: -.7rem;
+}
+
+.global-headline .sub-headline {
+  letter-spacing: -1px;
+  line-height: .42;
+}
+
+.restaurent-info {
+  text-align: center;
+}
+
+.restaurent-description {
+  margin-bottom: 3rem;
+}
+
+.restaurent-description p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.body-btn {
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+  position: relative;
+  transition: color 0.5s;
+}
+
+.body-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-font-color);
+  transition: background-color .5s;
+}
+
+.body-btn:hover,
+.body-btn:focus {
+  content: '';
+  color: var(--main-font-color-dark);
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before {
+  background-color: var(--main-font-color-dark);
+}
+
+/* recipe section */
